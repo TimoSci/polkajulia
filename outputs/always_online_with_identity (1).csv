@@ -1,0 +1,4 @@
+address,display,legal,web,email,twitter
+addr1,Validator A,Legal A,web.a.com,a@example.com,@valA
+addr2,Validator B,Legal B,web.b.com,b@example.com,@valB
+addr3,Validator C,Legal C,web.c.com,c@example.com,@valC
