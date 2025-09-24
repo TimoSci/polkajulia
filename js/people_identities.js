@@ -1,4 +1,4 @@
-// people_identities.js
+// people_identities.js funciona se tiver um validators.json
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 const fs = require('fs');
 
