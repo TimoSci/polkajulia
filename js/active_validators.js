@@ -1,3 +1,4 @@
+//validadores ativos na era atual
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
 async function main() {

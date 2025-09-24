@@ -1,3 +1,4 @@
+//produz o validators.json
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 const fs = require('fs');
 

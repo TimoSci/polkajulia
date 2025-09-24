@@ -1,3 +1,5 @@
+//apenas para checar info dos nodes
+
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
 async function main() {
