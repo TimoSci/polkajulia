@@ -1,11 +1,9 @@
 using CSV, DataFrames
 include("config.jl")
-include("filters.jl")
 
 filename = ERAS_DATA_PATH
 
-df = CSV.read(filename, DataFrame)
+function load_eras_data()
+  CSV.read(filename, DataFrame)
+end
 
-df_pruned = remove_missing(df)
-
-println(df_pruned)
