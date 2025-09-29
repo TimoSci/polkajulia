@@ -6,3 +6,7 @@ function create_binary_matrix(df)
     end
     return binary_matrix_df
 end
+
+function filter_variable_validators(binary_matrix_df)
+    return [name for name in names(binary_matrix_df)[2:end] if length(unique(binary_matrix_df[!, name])) > 1]
+end

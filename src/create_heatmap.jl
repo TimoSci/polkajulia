@@ -11,4 +11,5 @@ binary_matrix = create_binary_matrix(df_pruned)
 # display(df_pruned)
 # display(df)
 
-display(binary_matrix)
+# display(binary_matrix)
+display(filter_variable_validators(binary_matrix))
