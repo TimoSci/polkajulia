@@ -5,4 +5,5 @@ include("load.jl")
 df = load_eras_data()
 df_pruned = remove_missing(df)
 
-println(df_pruned)
+display(df_pruned)
+# display(df)

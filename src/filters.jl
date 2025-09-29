@@ -1,6 +1,3 @@
 function remove_missing(df)
-    combine(
-           groupby(df, [:era, :display]),
-           :eraPoints => maximum => :eraPoints
-       )
+    filter(row -> !ismissing(row.display), df)
 end
