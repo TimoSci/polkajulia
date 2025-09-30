@@ -41,5 +41,5 @@ hm= heatmap(
        )
 
 # display(hm)
-println("Saving heatmap to file: $OUTPUT_FILENAME")
-savefig(hm, OUTPUT_FILENAME)
+println("Saving heatmap to file: $MEDIA_DIR$IMAGE_FILENAME")
+savefig(hm, "$MEDIA_DIR/$IMAGE_FILENAME")
