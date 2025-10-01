@@ -23,3 +23,27 @@ function correlation_matrix(mat)
     end
     return cor_mat
 end
+
+function phi_coefficient_(a, b, c, d)
+        numerator = (a * d) - (b * c)
+        denominator = sqrt((a + b) * (c + d) * (a + c) * (b + d))
+        return numerator / denominator
+end
+
+function phi_coefficient(col1, col2)
+    a = sum((col1 .== 1) .& (col2 .== 1))  # both present
+    b = sum((col1 .== 1) .& (col2 .== 0))  # col1 present, col2 absent
+    c = sum((col1 .== 0) .& (col2 .== 1))  # col1 absent, col2 present
+    d = sum((col1 .== 0) .& (col2 .== 0))  # both absent
+    return phi_coefficient_(a, b, c, d)
+end
+
+function phi_matrix(mat)
+    mat_t = mat' # transpose
+    n_val = size(mat_t, 1)
+    phi_mat = Matrix(undef, n_val, n_val)
+    for i in 1:n_val, j in 1:n_val
+        phi_mat[i, j] = phi_coefficient(mat_t[i, :], mat_t[j, :])
+    end
+    return phi_mat
+end

@@ -18,9 +18,12 @@ end
 
 println("Creating binary matrix data frame")
 binary_matrix_df = create_binary_matrix(df_pruned)
+binary_matrix = Matrix(binary_matrix_df[:, 2:end])
+println("Binary matrix size: $(size(binary_matrix))")
 
 println("Filtering varying validators")
 varying_addresses = varying_validators_addresses(binary_matrix_df)
+println("Number of varying addresses: $(length(varying_addresses))")
 filtered_matrix_df = filter_varying(binary_matrix_df, varying_addresses)
 
 println("Calculating correlation matrix")
